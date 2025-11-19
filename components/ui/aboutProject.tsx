@@ -5,8 +5,8 @@ import ProjectDescription from "./ProjectDescription";
 import Footer from "./FooterProject";
 
 const AboutProject = (
-    { title, subTitle, img1, img2, img3 } : 
-    {title: string, subTitle: string, img1: string, img2: string, img3: string}) => {
+    { title, subTitle, img1, img2, img3, img4  } : 
+    {title: string, subTitle: string, img1: string, img2: string, img3: string, img4?: string}) => {
     return (
       <div className="relative bg-black-100 flex flex-col justify-center items-center overflow-hidden mx-auto sm:px-10 px-5 py-20 text-center">
         <p className="text-sm sm:text-base text-gray-400 uppercase tracking-widest mb-3">
@@ -54,7 +54,7 @@ const AboutProject = (
         <h1 className="text-white text-lg sm:text-xl font-semibold">2025</h1>
         </div>
       </div>
-    <AppScreensSection img1={img1} img2={img2} img3={img3}/>
+      <AppScreensSection img1={img1} img2={img2} img3={img3} img4={img4}/>
     <ProjectDescription />
     <Footer/>
     {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black-900/60 to-black-100 pointer-events-none"></div> */}

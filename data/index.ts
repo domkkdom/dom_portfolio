@@ -145,7 +145,7 @@ export const projects = [
       id: 2,
       title: "Greenwich Asset Management",
       des: "Investment management app",
-      img: "/p2.svg",
+      img: "/GreenWish-4234.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
       link:  `/projects/${2}`,
     },
@@ -153,7 +153,7 @@ export const projects = [
       id: 3,
       title: "Movie Suggestion App",
       des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/MovieAppImg1.png",
+      img: "/MovieAppImg5.png",
       iconLists: ["/flutter_icon.svg", "/riverpod_logo.png", "/dart_icon.svg", "/figma_icon.svg", "firebase_icon.svg"],
       link:  `/projects/${3}`,
     },
@@ -161,7 +161,7 @@ export const projects = [
       id: 4,
       title: "GTI AssetManagement",
       des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/gti_101.png",
+      img: "/gtigti.png",
       iconLists: ["/flutter_icon.svg", "/logo.png", "/dart_icon.svg", "/figma_icon.svg", "firebase_icon.svg"],
       link: `/projects/${4}`,
     },
@@ -263,6 +263,67 @@ export const projects = [
       thumbnail: "/exp4.svg",
     },
   ];
+
+    
+  export const toolIWorkWith = [
+    {
+      id: 1,
+      title: "Flutter",
+      desc: "FrameWork.",
+      className: "md:col-span-3 ",
+      thumbnail: "/flutter_icon.svg",
+    },
+    {
+      id: 2,
+      title: "VSCode",
+      desc: "Integrated Development Enviroment",
+      className: "md:col-span-3", // change to md:col-span-2
+      thumbnail: "/icons8-vs-code.svg",
+    },
+    {
+      id: 3,
+      title: "GitHub",
+      desc: "Version Control System",
+      className: "md:col-span-3", // change to md:col-span-2
+      thumbnail: "/icons8-github.svg",
+    },
+    {
+      id: 4,
+      title: "Figma",
+      desc: "UX/UI Design & Prototyping",
+      className: "md:col-span-3",
+      thumbnail: "/figma_icon.svg",
+    },
+    {
+      id: 5,
+      title: "Firebase",
+      desc: "FrameWork",
+      className: "md:col-span-3",
+      thumbnail:  "firebase_icon.svg",
+    },
+    {
+      id: 6,
+      title: "Slack",
+      desc: "Communication",
+      className: "md:col-span-3",
+      thumbnail: "/icons8-slack-24.png",
+    },
+    {
+      id: 7,
+      title: "RiverPod",
+      desc: "Flutter FrameWork",
+      className: "md:col-span-3",
+      thumbnail: "/riverpod_logo.png",
+    },
+    {
+      id: 8,
+      title: "Stacked",
+      desc: "Flutter FrameWork",
+      className: "md:col-span-3",
+      thumbnail: "/logo.png",
+    },
+  ];
+  
   
   export const socialMedia = [
     {

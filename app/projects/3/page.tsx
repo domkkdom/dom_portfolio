@@ -10,6 +10,7 @@ const page = ({}) => {
            img1={"/MovieAppImg1.png"}
            img2={"/MovieAppImg2.png"}
            img3={"/MovieAppImg3.png"}
+           img4={"/MovieAppImg5.png"}
         />
     </div>
   )
