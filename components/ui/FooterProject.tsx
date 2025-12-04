@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex space-x-6 justify-center md:justify-end">
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/yourprofile"
+           href='https://www.linkedin.com/in/dominion-jesusblessing-2026a7251/'
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-white  transition-colors"
@@ -26,8 +26,8 @@ const Footer = () => {
           </a>
 
           {/* Twitter/X */}
-          <a
-            href="https://x.com/home"
+          {/* <a
+            href= "https://x.com/d_jesusblessing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-white transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M24 4.6c-.9.4-1.8.6-2.8.8 1-.6 1.7-1.5 2-2.6-.9.6-1.9 1-3 1.2-.9-.9-2.2-1.5-3.6-1.5-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1-4.1-.2-7.7-2.2-10.1-5.3-.4.7-.6 1.5-.6 2.4 0 1.7.9 3.2 2.2 4.1-.8 0-1.5-.2-2.2-.6v.1c0 2.3 1.6 4.3 3.7 4.7-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 1.9 2.3 3.3 4.3 3.3-1.6 1.3-3.6 2-5.8 2-.4 0-.8 0-1.2-.1 2 1.3 4.4 2 6.9 2 8.3 0 12.8-6.9 12.8-12.8 0-.2 0-.4 0-.6.9-.7 1.7-1.5 2.3-2.4z" />
             </svg>
-          </a>
+          </a> */}
 
           {/* GitHub */}
           <a

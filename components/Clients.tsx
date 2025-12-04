@@ -7,7 +7,7 @@ const Clients = () => {
     <div className='py-20' id="testimonials">
     <h1 className='heading'>
       Kind Word From 
-      <span className='text-purple'>satisfied Clients</span>
+      <span className='text-purple'>  satisfied Clients </span>
     </h1>
     <div className='flex flex-col item-center'>
       <div className='h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden'>

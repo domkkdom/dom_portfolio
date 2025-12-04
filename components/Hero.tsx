@@ -44,7 +44,7 @@ import { FaLocationArrow } from 'react-icons/fa'
         <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Apps Magic with Flutter
+             Create Dynamic App Magic with Flutter
           </p>
 
           <TextGenerateEffect
@@ -56,7 +56,7 @@ import { FaLocationArrow } from 'react-icons/fa'
             Hi! I&apos;m JesusBlessing Dominion, a Flutter Developer based in Nigeria.
           </p>
 
-          <a href="#about">
+          <a href="#projects">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
