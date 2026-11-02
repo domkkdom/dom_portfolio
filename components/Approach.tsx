@@ -1,44 +1,35 @@
-import { toolIWorkWith, workExperience } from '@/data'
-import React from 'react'
-import { Button } from './ui/MovingBorders'
-import SkillCard from './ui/Skilled-cards'
+import { toolIWorkWith } from "@/data";
+import React from "react";
+import SkillCard from "./ui/Skilled-cards";
 
 const Approach = () => {
   return (
-    <div className='py-20' id="testimonials">
-    <h1 className='heading'>
-    These are the tools I use 
-      <span className='text-purple'> everyday </span>
-    </h1>
-    <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
-        {toolIWorkWith.map((card)=> (
-            // <Button
-            //   key={card.id}
-            //   borderRadius='1.75rem'
-            //   duration={Math.floor(Math.random() * 10000) + 10000}
-            //   className='flex-5 text-white border-neutral-200 dark:border-slate-800'
-            // >
-            //     <div className='flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
-            //         <img src={card.thumbnail} alt={card.thumbnail} className='lg:w-32 md:w-20 w-16' />
-            //         <div className='lg:ms-5'>
-            //            <h1 className='text-start text-xl md:text-2xl font-bold'>
-            //              {card.title}
-            //            </h1>
-            //            <p className='text-start text-white-100 mt-3 font-semibold'>
-            //             {card.desc}
-            //            </p>
-            //         </div>
-            //     </div>
-            // </Button>
-            <SkillCard title={card.title} desc={card.desc} thumbnail={card.thumbnail}/>
+    <section className="py-20 scroll-mt-28 sm:scroll-mt-32" id="skills">
+      <div className="text-center mb-12">
+        <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-purple-600 dark:text-purple mb-2">
+          Technical Arsenal
+        </p>
+        <h1 className="heading text-slate-900 dark:text-white">
+          Tools & Frameworks I Use{" "}
+          <span className="text-purple-600 dark:text-purple">Everyday</span>
+        </h1>
+        <p className="mt-3 text-slate-600 dark:text-[#BEC1DD] text-sm sm:text-base max-w-xl mx-auto">
+          Modern, industry-tested tools optimized for high velocity, modular clean code, and rock-solid mobile performance.
+        </p>
+      </div>
+
+      <div className="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        {toolIWorkWith.map((card) => (
+          <SkillCard
+            key={card.id}
+            title={card.title}
+            desc={card.desc}
+            thumbnail={card.thumbnail}
+          />
         ))}
       </div>
-    </div>
-    
-  )
-}
+    </section>
+  );
+};
 
-export default Approach
-
-
-
+export default Approach;

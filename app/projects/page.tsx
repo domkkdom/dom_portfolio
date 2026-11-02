@@ -1,20 +1,17 @@
-import Grid from "@/components/Grid";
-import Hero from "@/components/Hero";
 import RecentProjects from "@/components/ui/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import Image from "next/image";
-import { FaHome } from "react-icons/fa";
+import { navItems } from "@/data";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function ProjectsPage() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative bg-white dark:bg-black-100 text-slate-900 dark:text-white flex justify-center overflow-clip items-center flex-col mx-auto sm:px-10 px-5 transition-colors duration-300 min-h-screen">
       <div className="max-w-7xl w-full">
-        <FloatingNav navItems={[
-          {name: "Home", link: '/', icon: <FaHome/>}
-        ]}/>
-       <Hero/>
-       <Grid/>
-       <RecentProjects />
+        <FloatingNav navItems={navItems} />
+        <div className="pt-28">
+          <RecentProjects />
+        </div>
+        <Footer />
       </div>
     </main>
   );

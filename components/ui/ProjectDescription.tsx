@@ -1,64 +1,51 @@
-import { featureFslApp, featureMovieApp, FeatureProp, technicalReview } from "@/data";
+import { FeatureProp, technicalReview } from "@/data";
 import TechnicalReview from "./TechnicalReview";
 import KeyFeature from "./KeyFeature";
 import ProjectDescriptions from "./Project_Description";
 
 type ProjectDescriptionProps = {
-  description: string, 
-  company : string, 
-  timeline: string, 
-  features: FeatureProp[] 
-}
+  description: string;
+  company: string;
+  timeline: string;
+  features: FeatureProp[];
+};
 
-export default function ProjectDescription( {
+export default function ProjectDescription({
   description,
-  company, 
+  company,
   timeline,
-  features
-  }: ProjectDescriptionProps) {
+  features,
+}: ProjectDescriptionProps) {
+  const isPersonal = company?.toLowerCase() === "personal";
 
-    return (
-      <section className="max-w-5xl mx-auto px-5 sm:px-10 py-16 text-white">
-       <div>
-        <ProjectDescriptions description={description}/>
-       </div>
+  return (
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-10 text-slate-900 dark:text-white text-center">
+      <ProjectDescriptions description={description} />
 
-        {company?.toLowerCase() == "personal" ? 
+      {isPersonal ? (
         <div>
-          <KeyFeature keyFeature={features}/>
+          <KeyFeature keyFeature={features} />
           <TechnicalReview technicalReview={technicalReview} />
         </div>
-        : 
+      ) : (
         <div>
-          <TechnicalReview technicalReview={features} />
+          <KeyFeature keyFeature={features} />
+        </div>
+      )}
 
-            {/* <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Key Features I Helped Deliver:
-            </h2>
-            <ul className="mb-8 space-y-4  leading-relaxed">
-                {features?.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-lg mr-2">{feature.icon}</span>
-                    <div>
-                      <span className="font-bold  text-lg ">{feature.title}</span>
-                      <span className=" text-md"> — {feature.description}</span>
-                    </div>
-                  </li>
-                ))}
-            </ul> */}
-        </div>}
-       
-  
-        {/* Platforms */}
-        <p className="text-gray-300 text-lg mb-6">
-          Built for <span className="font-semibold">Android</span> and later <span className="font-semibold">iOS</span>, optimized for performance, security, and user engagement.
+      {/* Target Platforms */}
+      <div className="mt-8 p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black-200/30 max-w-2xl mx-auto">
+        <p className="text-slate-700 dark:text-gray-300 text-sm sm:text-base">
+          Built for <span className="font-semibold text-purple-600 dark:text-purple">iOS</span> and{" "}
+          <span className="font-semibold text-purple-600 dark:text-purple">Android</span>, optimized for 60fps animations, security, and peak responsiveness.
         </p>
-  
-        {/* Timeline */}
-        <p className="text-gray-500 text-sm italic">
-          {timeline}
-        </p>
-      </section>
-    );
-  }
-  
+
+        {timeline && (
+          <p className="text-slate-500 dark:text-gray-400 text-xs sm:text-sm italic mt-2">
+            {timeline}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}

@@ -1,44 +1,34 @@
-import React from 'react'
-import { companies, testimonials } from '@/data'
-import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
+import React from "react";
+import { testimonials } from "@/data";
+import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 
 const Clients = () => {
   return (
-    <div className='py-20' id="testimonials">
-    <h1 className='heading'>
-      Kind Word From 
-      <span className='text-purple'>  satisfied Clients </span>
-    </h1>
-    <div className='flex flex-col item-center'>
-      <div className='h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden'>
+    <section className="py-20 scroll-mt-28 sm:scroll-mt-32" id="testimonials">
+      <div className="text-center mb-12">
+        <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-purple-600 dark:text-purple mb-2">
+          Endorsements
+        </p>
+        <h1 className="heading text-slate-900 dark:text-white">
+          Kind words from{" "}
+          <span className="text-purple-600 dark:text-purple">collaborators & leads</span>
+        </h1>
+        <p className="mt-3 text-slate-600 dark:text-[#BEC1DD] text-sm sm:text-base max-w-xl mx-auto">
+          Feedback from engineering leads, founders, and colleagues I&apos;ve collaborated with on production mobile applications.
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <div className="h-[40vh] md:h-[22rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden w-full">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
             speed="slow"
-          /> 
-           {/* <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-10 w-5"
-                />
-                <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
-                />
-              </div>
-            </React.Fragment>
-          ))}
-        </div> */}
+          />
+        </div>
       </div>
-    </div>
-   </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Clients
+export default Clients;

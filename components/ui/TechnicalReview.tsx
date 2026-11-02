@@ -1,49 +1,60 @@
 "use client";
 
 import { FeatureProp } from "@/data";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { staggerChildren: 0.2, duration: 0.5 }
-  }
+    transition: { staggerChildren: 0.15, duration: 0.5 },
+  },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.9 } }
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const TechnicalReview = ({ technicalReview }: { technicalReview: FeatureProp[] }) => {
+const TechnicalReview = ({
+  technicalReview,
+}: {
+  technicalReview: FeatureProp[];
+}) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
+      className="text-left max-w-4xl mx-auto my-8"
     >
-      <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-        Technical Review
-      </h2>
+      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6 border-b border-slate-200 dark:border-white/10 pb-3">
+        Technical Architecture & Engineering Highlights:
+      </h3>
 
-      <ul className="mb-8 space-y-4 leading-relaxed">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {technicalReview.map((item, index) => (
-          <motion.li
+          <motion.div
             key={index}
-            className="flex items-start"
+            className="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black-200/40 shadow-sm flex items-start gap-3"
             variants={itemVariants}
           >
-            <span className="text-lg mr-2">{item.icon}</span>
+            <span className="text-xl p-2 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400">
+              {item.icon}
+            </span>
             <div>
-              <span className="font-bold text-lg">{item.title}</span>
-              <span className="text-md"> — {item.description}</span>
+              <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
+                {item.title}
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 mt-1 leading-relaxed">
+                {item.description}
+              </p>
             </div>
-          </motion.li>
+          </motion.div>
         ))}
-      </ul>
+      </div>
     </motion.div>
   );
 };
